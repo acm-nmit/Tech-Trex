@@ -64,13 +64,13 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				tech: {
-					teal: "#1EFDCA",
-					cyan: "#0FD0D6",
-					dark: "#061A1C",
-					darker: "#051114",
-					darkest: "#030A0C",
-					blue: "#046E8F",
-					purple: "#7E69AB"
+					purple: "#9576FF",
+					blue: "#7688FF",
+					dark: "#0C0E1C",
+					darker: "#090B17",
+					darkest: "#060714",
+					cyan: "#6FC3DF",
+					magenta: "#CF8DFF"
 				}
 			},
 			fontFamily: {
@@ -169,8 +169,8 @@ export default {
 			},
 			backgroundImage: {
 				'circuit-pattern': "url('/circuit-pattern.svg')",
-				'tech-gradient': 'linear-gradient(135deg, rgba(30,253,202,0.2) 0%, rgba(15,208,214,0.2) 100%)',
-				'hero-gradient': 'linear-gradient(180deg, rgba(6,26,28,0.9) 0%, rgba(5,17,20,0.95) 100%)',
+				'tech-gradient': 'linear-gradient(135deg, rgba(149, 118, 255, 0.2) 0%, rgba(118, 136, 255, 0.2) 100%)',
+				'hero-gradient': 'linear-gradient(180deg, rgba(10,12,25,0.9) 0%, rgba(8,10,20,0.95) 100%)',
 			}
 		}
 	},

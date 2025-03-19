@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Clock, Calendar } from 'lucide-react';
+import { Clock, Calendar, Sparkles } from 'lucide-react';
 
 interface TimeLeft {
   days: number;
@@ -44,9 +44,9 @@ const CountdownTimer = () => {
   }, [eventDate]);
 
   return (
-    <div className="w-full max-w-3xl mx-auto glass-card rounded-xl p-6 md:p-8">
+    <div className="w-full max-w-3xl mx-auto glass-card rounded-xl p-6 md:p-8 border-2 border-tech-purple/20">
       <div className="flex items-center justify-center gap-2 mb-4">
-        <Clock className="text-tech-teal" size={20} />
+        <Sparkles className="text-tech-purple" size={20} />
         <h3 className="text-lg md:text-xl font-medium">Event Countdown</h3>
       </div>
       
@@ -58,9 +58,9 @@ const CountdownTimer = () => {
           { label: 'Seconds', value: timeLeft.seconds }
         ].map((item) => (
           <div key={item.label} className="flex flex-col items-center">
-            <div className="relative w-full aspect-square bg-tech-dark rounded-lg flex items-center justify-center border border-tech-teal/30 overflow-hidden">
+            <div className="relative w-full aspect-square bg-tech-dark rounded-lg flex items-center justify-center border border-tech-purple/30 overflow-hidden">
               <div className="absolute inset-0 bg-tech-gradient opacity-10 animate-pulse-glow"></div>
-              <span className="text-3xl md:text-5xl font-mono font-bold text-tech-teal">
+              <span className="text-3xl md:text-5xl font-mono font-bold text-tech-purple">
                 {item.value.toString().padStart(2, '0')}
               </span>
             </div>
@@ -69,14 +69,14 @@ const CountdownTimer = () => {
         ))}
       </div>
       
-      <div className="mt-6 flex flex-col md:flex-row items-center justify-center gap-3 pt-4 border-t border-tech-teal/20">
+      <div className="mt-6 flex flex-col md:flex-row items-center justify-center gap-3 pt-4 border-t border-tech-purple/20">
         <div className="flex items-center gap-2">
-          <Calendar className="text-tech-cyan" size={18} />
+          <Calendar className="text-tech-blue" size={18} />
           <span className="text-sm">April 4th, 2025</span>
         </div>
         <div className="hidden md:block text-foreground/50">|</div>
         <div className="text-sm text-center">
-          <span className="text-tech-teal">Venue:</span> Room No. 253, C Block
+          <span className="text-tech-purple">Venue:</span> Room No. 253, C Block
         </div>
       </div>
     </div>

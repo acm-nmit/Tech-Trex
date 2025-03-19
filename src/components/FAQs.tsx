@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { ChevronDown, HelpCircle } from 'lucide-react';
+import { ChevronDown, HelpCircle, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const faqs = [
@@ -45,7 +45,9 @@ const FAQs = () => {
             key={index}
             className={cn(
               "glass-card rounded-xl overflow-hidden transition-all duration-300",
-              openIndex === index ? "shadow-[0_0_15px_rgba(30,253,202,0.2)]" : ""
+              openIndex === index 
+                ? "shadow-[0_0_15px_rgba(149,118,255,0.2)] border-l-2 border-tech-purple/50" 
+                : "border-l-2 border-transparent"
             )}
           >
             <button
@@ -53,12 +55,15 @@ const FAQs = () => {
               onClick={() => toggleFAQ(index)}
             >
               <div className="flex items-center gap-3">
-                <HelpCircle className="text-tech-teal min-w-[20px]" size={20} />
+                {openIndex === index ? 
+                  <Sparkles className="text-tech-purple min-w-[20px]" size={20} /> : 
+                  <HelpCircle className="text-tech-blue min-w-[20px]" size={20} />
+                }
                 <span className="font-medium text-lg">{faq.question}</span>
               </div>
               <ChevronDown 
                 className={cn(
-                  "text-tech-teal transition-transform duration-300 min-w-[20px]",
+                  "text-tech-purple transition-transform duration-300 min-w-[20px]",
                   openIndex === index ? "transform rotate-180" : ""
                 )} 
                 size={20} 
@@ -71,7 +76,7 @@ const FAQs = () => {
                 openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
               )}
             >
-              <div className="p-5 pt-0 text-foreground/70 border-t border-tech-teal/20">
+              <div className="p-5 pt-0 text-foreground/70 border-t border-tech-purple/20">
                 {faq.answer}
               </div>
             </div>
